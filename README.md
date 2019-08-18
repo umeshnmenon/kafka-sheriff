@@ -60,7 +60,7 @@ information from these metrics and return to the consumer in response to HTTP ap
 - Assuming your Kafka consumer is deployed as a Docker container and is registered in AWS ECS for the container 
 management, add a policy in the Service definition of ECS to scale up and down the containers when the custom metric TotalLag breaches a threshold.
 
-###Configuration
+### Configuration
 
 KafkaSheriff configuration follows INI format. The configuration is organized into several subheadings. The configuration 
 file is in the root folder of the KafkaSheriff distribution. The config file follows the naming convention ‘settings_<<env>>.ini’ 
@@ -87,11 +87,9 @@ In the current version following end points are available:
 | ------------- | ------------- | ------------- |
 | Healthcheck | GET /bpmon/healthcheck | Healthcheck of KafkaSheriff |
 | List topics | GET /bpmon/consumergroup/<<group_id>>/topics/ | List of topics that the consumer group consumes |
-| Consumer Group Status | GET /bpmon/consumergroup/<<group_id>>/topics/<<topic>> | Current status of the consumer group 
-based on the evaluation of all partitions that it consumes. It returns the current consumer offset (committed), broker 
-offset, current lag for each partition and the total current lag for the group. |
+| Consumer Group Status | GET /bpmon/consumergroup/<<group_id>>/topics/<<topic>> | Current status of the consumer group based on the evaluation of all partitions that it consumes. It returns the current consumer offset (committed), broker offset, current lag for each partition and the total current lag for the group. |
 
-###How to run
+### How to run
 
 KafkaSheriff is implemented as a Docker container. If you are using AWS, you can use ECR registry to register your 
 container. We can use the standard Docker run command to run the container.
