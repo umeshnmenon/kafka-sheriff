@@ -9,7 +9,7 @@ as option to store the metrics in either an inbuilt cache or to an external Redi
 also option to store the total lag in the consumer group using set of Amazon CloudWatch metrics and alarms to use for 
 auto scaling purpose, etc.. 
 
-###Features
+### Features
 
 KafkaSheriff is primarily designed to monitor only inbound and outbound topic partition status. The topic and 
 group names are configurable. It provides the broker and consumer offsets, current lag for each partition and total lag.
@@ -33,7 +33,7 @@ The broker offset is the HEAD offset of the partition and committed offset is th
 
 We then use a simple threshold based approach to scale up and down the consumers using this total lag. For e.g. if total_lag > 50, add two consumers and if total_lag < 50, remove two consumers. 
 
-###Solution Architecture
+### Solution Architecture
 
 ![High Level Design of Simple Kafka Monitor Service](images/kafka-monitor-arch.png?raw=true "High Level Design of Simple Kafka Monitor Service")
 
