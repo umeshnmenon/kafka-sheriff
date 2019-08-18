@@ -1,0 +1,7 @@
+THREAD_NAME='kafka-backpressure'
+BURROW='burrow'
+KAFKAMONITOR='kafkamonitor'
+KAFKA='kafka'
+CLOUDWATCH='cloudwatch'
+APP='app'
+CW_METRIC_DIMENSION_CONSUMERGROUP='consumergroup'
